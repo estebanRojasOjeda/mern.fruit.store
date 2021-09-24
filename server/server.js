@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-const db = require("./config/db");
-//const route = require("./route/author.route");
+const db = require("./config/db.config");
+const fruitRoute = require("./route/fruit.route");
+const userRoute = require("./route/user.route");
+
 const app = express();
 const port = 8000;
-
 
 app.use(cors({
     credentials: true,
@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 db;
-//route(app);
+userRoute(app);
+fruitRoute(app);
 
 app.listen(port, () => {
     console.log(`Server listening at port: ${port}`);
