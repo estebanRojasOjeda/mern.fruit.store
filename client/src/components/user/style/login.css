@@ -1,0 +1,16 @@
+.login{
+    background-color: #dddddd; 
+    margin: 40px;
+    padding: 10px;
+    min-height: 500px;
+    width: 90%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+}
+    .login Form{
+        max-width: 500px;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
